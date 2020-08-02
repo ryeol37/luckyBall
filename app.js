@@ -9,6 +9,11 @@ var usersRouter = require('./routes/users');
 
 var app = express();
 
+/* 2. listen()메소드를 실행해서 3000번 포트를 대기상태로 만듦*/
+var server = app.listen(3000, function(){
+    console.log("Node.js is listening to PORT:" + server.address().port);
+});
+
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
